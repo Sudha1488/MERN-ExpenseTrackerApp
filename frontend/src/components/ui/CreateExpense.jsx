@@ -46,7 +46,7 @@ const CreateExpense = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post("http://localhost:8001/api/v1/expense/add", formData, {
+            const res = await axios.post("https://mern-expensetrackerapp-backend.onrender.com/api/v1/expense/add", formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

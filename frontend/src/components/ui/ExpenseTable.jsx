@@ -26,7 +26,7 @@ const ExpenseTable = () => {
     const newStatus = !checkedItems[expenseId];
     try {
       const res = await axios.put(
-        `http://localhost:8001/api/v1/expense/${expenseId}/done`,
+        `https://mern-expensetrackerapp-backend.onrender.com/api/v1/expense/${expenseId}/done`,
         { done: newStatus },
         {
           headers: {

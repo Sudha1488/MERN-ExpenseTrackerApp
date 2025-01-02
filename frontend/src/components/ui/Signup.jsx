@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Label } from './label';
 import { Input } from './input';
-import Logo from '../shared/logo';
+import Logo from '../shared/Logo.jsx';
 import { Button } from './button';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';

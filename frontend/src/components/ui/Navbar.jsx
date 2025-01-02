@@ -18,7 +18,7 @@ const Navbar = () => {
     const logoutHandler = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.get("http://localhost:8001/api/v1/user/logout");
+            const res = await axios.get("https://mern-expensetrackerapp-backend.onrender.com/api/v1/user/logout");
             if (res.data.success) {
                 dispatch(setAuthUser(null));
                 dispatch(setExpenses([]));

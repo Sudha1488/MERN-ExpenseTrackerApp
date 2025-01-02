@@ -9,7 +9,7 @@ import expenseRoute from "./routes/expense.route.js"
 dotenv.config({});
 
 const app = express();
-const PORT = 8001;
+const port = process.env.PORT || 8001
 
 //middleware
 app.use(express.json());
@@ -26,7 +26,7 @@ app.use("/api/v1/user",userRoute);
 app.use("/api/v1/expense",expenseRoute);
 
 
-app.listen(PORT, () => {
+app.listen(port, () => {
     connectDB();
-    console.log(`Server listen at port ${PORT}`);
+    console.log(`Server listen at port ${port}`);
 });

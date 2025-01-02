@@ -23,7 +23,7 @@ const Signup = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:8001/api/v1/user/register", input, {
+            const res = await axios.post("https://mern-expensetrackerapp-backend.onrender.com/api/v1/user/register", input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

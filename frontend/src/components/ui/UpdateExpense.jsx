@@ -55,7 +55,7 @@ const UpdateExpense = ({ expense }) => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.put(`http://localhost:8001/api/v1/expense/update/${expense._id}`, formData, {
+            const res = await axios.put(`https://mern-expensetrackerapp-backend.onrender.com/api/v1/expense/update/${expense._id}`, formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

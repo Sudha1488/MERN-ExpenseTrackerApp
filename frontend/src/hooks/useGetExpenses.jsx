@@ -12,7 +12,7 @@ const useGetExpenses = () =>{
         const fetchExpenses = async ()=>{
             try {
                 axios.defaults.withCredentials = true;
-                const res= await axios.get(`http://localhost:8001/api/v1/expense/getall?category=${category}&done=${markAsDone}`);
+                const res= await axios.get(`https://mern-expensetrackerapp-backend.onrender.com/api/v1/expense/getall?category=${category}&done=${markAsDone}`);
                 if(res.data.success){
                     dispatch(setExpenses(res.data.expense))
                 }
